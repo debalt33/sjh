@@ -1,5 +1,9 @@
-import { createRoot } from "react-dom/client";
-import App from "./App.tsx";
-import "./globals.css";
+"use client";
 
-createRoot(document.getElementById("root")!).render(<App />);
+import React from 'react';
+import { provideAuth } from 'supabase-auth-react';
+const Main = () => {
+  provideAuth();
+  return <div>Hello World!</div>;
+};
+export default Main;
